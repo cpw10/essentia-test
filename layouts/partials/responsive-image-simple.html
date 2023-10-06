@@ -1,0 +1,9 @@
+<picture>
+    <source srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=avif&q=75&width=550&height=275" type="image/avif">
+
+    <source srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=webp&q=75&width=550&height=275" type="image/webp">
+
+    <source srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=jpg&q=75&width=550&height=275" type="image/jpg">
+
+    <img src="{{ .image.image_url }}" alt="{{ .image.image_alt }}" width="400" height="350">   
+</picture>

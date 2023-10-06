@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="hero--blog block bg-black" aria-labelledby="hero-heading">
+  <div class="wrapper-sm text-align-center flow">
+    <h1 class="max-width-none" id="hero-heading">{{ .Title }}</h1>
+  </div>
+</section>
+<div class="block">
+    <div class="wrapper-sm flow">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

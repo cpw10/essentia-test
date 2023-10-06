@@ -1,0 +1,13 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	display: block;
+	max-inline-size: 100%;
+	inline-size: 100%;
+	block-size: auto;
+}
+
+figure {
+	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+}

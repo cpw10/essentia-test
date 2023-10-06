@@ -1,0 +1,19 @@
+<section class="hero--simple block" aria-labelledby="hero-heading">
+    <div class="wrapper-lg columns gap-md">
+        <div class="col margin-block-auto">
+          <div class="accent-line wrapper-sm flow">
+            <h1 class="no-margin" id="hero-heading">{{ .heading }}</h1>
+            <p>{{ .body | markdownify }}</p>
+            {{ if .button.enabled }}
+              {{ with .button }}
+                  <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        <div class="decorative-image col">
+          <img class="decorative-image__image rounded-image" src="{{ .image.image_url }}" alt="{{ .image.image_alt }}" width="1200" height="800">
+          <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+        </div>
+    </div>
+</section>

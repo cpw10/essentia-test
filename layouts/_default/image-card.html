@@ -1,0 +1,11 @@
+<li class="image-card">
+    <div class="image-card__image">
+        <img src="{{ .Params.seo.featured_image }}" alt="{{ .Params.seo.featured_image_alt }}">
+    </div>
+    <div class="image-card__content">
+        <h3 class="no-margin"><a href="{{ .Permalink }}" class="card__link">{{ .Title }}</a></h3>
+        {{ if .Params.job_title }}
+            <p class="image-card__job-title text-style-slub">{{ .Params.job_title }}</p>
+        {{ end }}
+    </div>
+</li>

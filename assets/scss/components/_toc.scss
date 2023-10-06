@@ -1,0 +1,27 @@
+.toc {
+    padding-block: $ic-200;
+    max-inline-size: none;
+    border: none;
+    border-radius: 0;
+}
+
+.toc__summary {
+    position: relative;
+}
+
+.toc__summary,
+.toc__list {
+    max-inline-size: 650px;
+}
+
+.toc__list {
+    margin-inline: auto;
+}
+
+.toc__list #TableOfContents > ul {
+    padding-inline-start: 0;
+}
+
+.toc__list li {
+    list-style-type: none;
+}

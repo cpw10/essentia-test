@@ -1,0 +1,5 @@
+<div class="icon-card flow text-align-{{ .text_align }}">
+    <img class="icon-card__image margin-inline-auto" src="{{ .image.image_url }}" alt="{{ .image.image_url }}">
+    <h3 class="max-width-none">{{ .heading }}</h3>
+    <p>{{ .body | markdownify }}</p>
+</div>

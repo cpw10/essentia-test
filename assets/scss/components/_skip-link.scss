@@ -1,0 +1,23 @@
+.screen-reader-skip-to-content {
+  position: absolute;
+  inset-inline-start: 6px;
+  inset-block-start: 7px;
+  background: $primary-color;
+  color: $white !important;
+  padding: 20px;
+  z-index: 1000000000;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+
+  &:not(:focus) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    block-size: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    inline-size: 1px;
+    white-space: nowrap;
+  }
+}

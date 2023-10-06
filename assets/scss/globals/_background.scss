@@ -1,0 +1,29 @@
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-black {
+  background-color: $black;
+  color: $white;
+}
+
+.bg-black-2 {
+  background-color: rgba($black, .98);
+  color: $white;
+}
+
+.bg-gray {
+  background-color: $light-gray;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-accent {
+  background-color: $secondary-color;
+}

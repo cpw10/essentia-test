@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="hero--staff hero--simple block bg-black" aria-labelledby="hero-heading">
+    <div class="wrapper-lg">
+        <div class="hero__content">
+            <div class="accent-line wrapper-lg flow">
+                <div>
+                    <a href="/careers/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all careers</a>
+                    <h1 class="no-margin" id="hero-heading">{{ .Title }}</h1>
+                </div>
+                <a class="btn btn--primary" href="/apply-now/">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="block">
+    <div class="wrapper-lg flow">
+        {{ .Content  }}
+    </div>
+</div>
+{{ partial "post-navigation" . }}
+{{ end }}

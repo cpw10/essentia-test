@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="hero--blog block bg-black" aria-labelledby="hero-heading">
+  <div class="wrapper-sm text-align-center flow">
+    <h1 class="max-width-none" id="hero-heading">{{ .Title }} Resources</h1>
+    <p class="margin-inline-auto">Dive deep into the world of sustainable energy with the latest articles, trends, and breakthroughs. At Essentia, we believe in empowering our community with knowledge. Stay informed, stay sustainable, and join the conversation shaping our energy future.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="wrapper-lg flex flex-justify-between">
+    {{ partial "blog/category-filter" . }}
+  </div>
+  <ul class="auto-grid wrapper-lg gap-sm">
+    {{ range .Paginator.Pages.ByDate.Reverse }}
+      {{ .Render "blog-card" }}
+    {{ end }}
+  </ul>
+  {{ partial "blog/custom-pagination.html" . }}
+</section>
+{{ end }}

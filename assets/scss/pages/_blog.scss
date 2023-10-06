@@ -1,0 +1,31 @@
+@include breakpoint (md) {
+  .parent-page-blog,
+  .parent-page-blog .site-wrap {
+    overflow-x: initial;
+  }
+}
+
+.post {
+  picture {
+    display: block;
+  }
+}
+
+.post__body h1,
+.post__body h2,
+.post__body h3,
+.post__body h4,
+.post__body h5,
+.post__body h6 {
+  max-inline-size: none;
+  text-wrap: wrap;
+}
+
+.post__body p + h2,
+.post__body p + h3,
+.post__body ul + h2,
+.post__body ul + h3,
+.post__body ol + h2,
+.post__body ol + h3 {
+  margin-top:$ic-600;
+}

@@ -1,0 +1,71 @@
+.hero .hero__image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: $ic-100;
+  position: relative;
+}
+
+.hero__image {
+  overflow: hidden;
+}
+
+.hero .hero__image-grid img:not(.background-circles){
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.hero .hero__image-grid-1 {
+  grid-area: 1 / 1 / 4 / 3;
+  block-size: 80%;
+  margin-block: auto;
+}
+
+.hero .hero__image-grid-2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.hero .hero__image-grid-2 img {
+  animation-delay: 2s;
+}
+
+.hero .hero__image-grid-3 {
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.hero .hero__image-grid-3 img {
+  animation-delay: 4s;
+}
+
+.hero--split-hero {
+  position: relative;
+}
+
+.hero--split-hero::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 0;
+  inline-size: 60%;
+  block-size: 50%;
+  background-color: $primary-color;
+  z-index: -1;
+
+  @include breakpoint(md) {
+    inset-block-start: 0;
+    inline-size: 30%;
+    block-size: 100%;
+  }
+}
+
+.hero--split-hero .hero__content {
+  padding-inline: 5%;
+  padding-inline: clamp($ic-300, 5%, $ic-1000);
+}
+
+.hero--split-hero .hero__image img {
+  aspect-ratio: 3/2;
+  block-size: 100%;
+  object-fit: cover;
+}

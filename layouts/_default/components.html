@@ -1,0 +1,212 @@
+{{ define "main" }}
+<section class="hero block" aria-labelledby="hero-heading">
+    <div class="wrapper-lg columns gap-md">
+        <div class="hero__content col margin-block-auto">
+          <div class="accent-line wrapper-sm flow">
+            <h1 class="no-margin" id="hero-heading">Turn Energy Data into Sustainable Action</h1>
+            <div class="flow">Harness the power of cutting-edge analytics with Essentia. Our intuitive software deciphers complex energy patterns, enabling businesses and homeowners to reduce costs and minimize environmental impact. Dive deep into real-time insights, make informed decisions, and lead the charge towards a sustainable future.</div>
+            <a class="btn btn--primary" href="/schedule-demo/">Schedule A Demo</a>
+          </div>
+        </div>
+        <div class="hero__image-grid decorative-image col">
+            <div class="hero__image-grid-1 hero__image rounded-image">
+                <img class="animate-slowpulse" src="/uploads/trees-1.jpg" alt="Trees with sunshine shining through branches" width="1800" height="600">
+            </div>
+            <div class="hero__image-grid-2 hero__image rounded-image">
+                <img class="animate-slowpulse" src="/uploads/analytics-1.jpg" alt="Analytics data on computer screen" width="1800" height="600">
+            </div>
+            <div class="hero__image-grid-3 hero__image rounded-image">
+                <img class="animate-slowpulse" src="/uploads/grass-1.jpg" alt="Morning dew on grass" width="1800" height="600">
+            </div>
+            <img class="decorative-image__circles background-circles" src="/uploads/circles-background.svg" alt="">
+        </div>
+    </div>
+</section>
+<section class="hero--simple block" aria-labelledby="hero-heading">
+    <div class="wrapper-lg columns gap-md">
+        <div class="hero__content col margin-block-auto">
+          <div class="accent-line wrapper-sm flow">
+            <h1 class="no-margin" id="hero-heading">Empowering businesses and homeowners with sustainable energy solutions since 2013.</h1>
+            <p>Essentia stands at the forefront of energy optimization, using innovative technology to make energy consumption more efficient and eco-friendly. Our dedicated team works relentlessly, driven by a vision of a sustainable future where technology and nature harmoniously coexist.</p> 
+            <a class="btn btn--primary" href="/schedule-demo/">Schedule A Demo</a>
+          </div>
+        </div>
+        <div class="decorative-image col">
+          <img class="decorative-image__image rounded-image" src="/uploads/trees-1.jpg" alt="Trees with sunshine shining through branches" width="1200" height="800">
+          <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+        </div>
+    </div>
+</section>
+<section class="media-text-block media-text-block--text-right block bg-black" aria-labelledby="for-business">
+    <div class="wrapper-lg columns gap-md">
+        <div class="media-text-block__content block margin-block-auto col">
+            <div class="wrapper-sm flow">
+                <h2 id="for-business">For Business</h2>
+                <p>In today’s competitive landscape, sustainable analytics provides businesses a strategic edge. With Essentia, companies can uncover hidden inefficiencies, adapt to evolving energy trends, and significantly reduce operational costs. Transform your energy data into tangible savings and sustainable solutions.</p>
+                <a class="btn btn--primary" href="/services/">sustainability for business</a>
+            </div>
+        </div>
+        <div class="decorative-image col">
+            <img class="decorative-image__image rounded-image" src="/uploads/business-1.jpg" alt="Trees with sunshine shining through branches" width="1200" height="800">
+            <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+        </div>
+    </div>
+</section>
+<section class="media-text-block media-text-block--text-left block bg-white" aria-labelledby="for-homeowners">
+    <div class="wrapper-lg columns gap-md">
+        <div class="media-text-block__content block margin-block-auto col">
+            <div class="wrapper-sm flow">
+                <h2 id="for-homeowners">For Homeowners</h2>
+                <p>Every household has the potential to be more energy-efficient and environmentally conscious. With Essentia’s insights, homeowners gain a clear understanding of their energy usage, empowering them to make smarter choices, reduce monthly bills, and contribute to a greener planet. Discover the harmony of savings and sustainability right at home.</p>
+                <a class="btn btn--primary" href="/services/">sustainability for homeowners</a>
+            </div>
+        </div>
+        <div class="decorative-image col">
+            <img class="decorative-image__image rounded-image" src="/uploads/homeowners-2.jpg" alt="Trees with sunshine shining through branches" width="1200" height="800">
+            <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+        </div>
+    </div>
+</section>
+<section class="block" aria-label="Featured Articles">
+    <div class="wrapper-lg flow">
+        <h2 class="text-align-center max-width-none">Our Latest Sustainability Resources</h2>
+        <p class="text-align-center margin-inline-auto">Dive deep into the world of sustainable energy with the latest articles, trends, and breakthroughs. At Essentia, we believe in empowering our community with knowledge. Stay informed, stay sustainable, and join the conversation shaping our energy future.</p>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="card">
+                    <div class="accent-line flow">
+                        <a class="card__category" href="//localhost:1313/categories/sustainability/" aria-label="View all Sustainability posts">Sustainability</a>
+                        <h3 class="card__title h6"><a href="//localhost:1313/blog/4-reasons-why-sustainability-is-important-in-business/" class="card__link">4 Reasons Why Sustainability Is Important in Business</a></h3>
+                        <p class="card__summary font-size-xs">
+                        The interest in adopting a greener lifestyle is now less of a trend, but more of a necessity in recent years as environmental degradation and climate change becomes more widespread and prevalent.
+                        </p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="text-align-center">
+            <a href="#" class="btn btn--primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+<section class="numbers block bg-" aria-labelledby="shaping-a-sustainable-future-by">
+	<div class="wrapper-lg">
+		<h2 id="shaping-a-sustainable-future-by" class="mb-6">Shaping a Sustainable Future By:</h2>
+		<div class="columns gap-md">
+            <div class="col">
+                <div class="icon-card flow">
+                    <img class="icon-card__image margin-inline-auto" src="/uploads/technology.svg" alt="/uploads/technology.svg">
+                    <h3>Empowering Through Technology</h3>
+                    <p>We harness the power of cutting-edge software to provide intuitive and actionable insights, enabling businesses and homeowners to understand and optimize their energy consumption effortlessly.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="icon-card flow">
+                    <img class="icon-card__image margin-inline-auto" src="/uploads/sustainability.svg" alt="/uploads/sustainability.svg">
+                    <h3>Advocating for Sustainability</h3>
+                    <p>Beyond solutions, we champion the cause of sustainability, advocating for responsible energy consumption and fostering a culture of eco-conscious decision-making.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="icon-card flow">
+                    <img class="icon-card__image margin-inline-auto" src="/uploads/community.svg" alt="/uploads/community.svg">
+                    <h3>Fostering Community Growth</h3>
+                    <p>We believe that collective change stems from individual action. Our mission extends beyond software, as we engage, educate, and grow with our community, driving forward towards a shared vision of a greener world.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+<section class="block bg-white" aria-label="Featured Articles">
+    <div class="wrapper-md flow">
+        <h2 class="text-align-center max-width-none">Meet Our Sustainability Experts</h2>
+        <p class="text-align-center margin-inline-auto">At Essentia, each member brings a unique blend of expertise, united by a common goal: to revolutionize the world of sustainable energy. From our pioneering co-founders to our innovative engineers and strategists, every individual plays a crucial role in shaping our journey.</p>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="image-card">
+                    <div class="image-card__image">
+                        <img src="/uploads/sophia-martinez.jpg" alt="">
+                    </div>
+                    <div class="image-card__content text-align-center">
+                        <h3 class="no-margin"><a href="//localhost:1313/about/sophia-martinez/" class="card__link">Sophia Martinez</a></h3>
+                        <p class="image-card__job-title text-style-slub">Co-founder &amp; CEO</p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="numbers block bg-gray" aria-labelledby="driving-sustainable-businesses-forward">
+	<div class="wrapper-lg">
+		<h2 id="driving-sustainable-businesses-forward" class="mb-6">Driving Sustainable Businesses Forward</h2>
+		<div class="columns gap-lg">
+            <div class="number col flow">
+                <h3>10+ Years in Business</h3>
+                <p class="fw-500">Empowering businesses and homeowners with sustainable energy solutions since 2013.</p>
+            </div>
+            <div class="number col flow">
+                <h3>150,000+ Customers</h3>
+                <p class="fw-500">A growing community of eco-conscious individuals and businesses trusting Essentia.</p>
+            </div>
+            <div class="number col flow">
+                <h3>27% Energy Saved</h3>
+                <p class="fw-500">Helping our users significantly reduce their carbon footprint and energy bills.</p>
+            </div>
+            <div class="number col flow">
+                <h3>$4.2 Million Saved</h3>
+                <p class="fw-500">Translated energy savings into substantial financial benefits for our community.</p>
+            </div>
+		</div>
+	</div>
+</section>
+<div class="block bg-black">
+    <div class="testimonial testimonial--full wrapper-md flow">
+        <div class="testimonial__icon margin-inline-auto icon-xxl icon-fill-white">
+            <svg width="45" height="41" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.65 40.15C0.65 37.75 0.65 35.35 0.65 32.95C0.65 30.45 0.65 28 0.65 25.6C0.65 17.9 1.75 11.85 3.95 7.44999C6.15 3.05 10 0.749995 15.5 0.549992L18.35 6.4C15.25 6.69999 13.1 8.19999 11.9 10.9C10.8 13.5 10.25 17.65 10.25 23.35H18.2V40.15H0.65ZM27.05 40.15C27.05 37.75 27.05 35.35 27.05 32.95C27.05 30.45 27.05 28 27.05 25.6C27.05 17.9 28.15 11.85 30.35 7.44999C32.55 3.05 36.4 0.749995 41.9 0.549992L44.75 6.4C41.65 6.69999 39.5 8.19999 38.3 10.9C37.2 13.5 36.65 17.65 36.65 23.35H44.6V40.15H27.05Z"></path>
+            </svg>
+        </div>
+        <p class="font-size-md text-align-center">"At first, I was skeptical about how much Essentia's real-time monitoring could benefit us. But within months, it became clear. We became empowered to make eco-friendly choices, reducing both our bills and our carbon footprint. Every homeowner should give it a try!"</p>
+        <div class="text-align-center">
+            <div class="testimonial__image">
+                <img src="/uploads/carl-1.jpg" alt="Headshot of Carl" width="50" height="50">
+            </div>
+            <div class="fw-600">Carl R.</div>
+            <div class="text-style-slub"></div>
+        </div>
+    </div>
+</div>
+<section class="cta block" aria-label="Call to Action">
+    <div class="wrapper-lg columns gap-lg">
+        <div class="accent-line col">
+            <div class="wrapper-sm flow">
+                <h2>Shape the Future of Energy with Us</h2>
+                <p>At Essentia, we believe in the power of innovation and collaboration. Join a team of forward-thinkers, driven by the mission to revolutionize energy consumption and sustainability. If you’re passionate about making a difference, we want you on board.</p>
+                <a class="btn btn--primary" href="/careers/">View Open Positions</a>
+            </div>
+        </div>
+        <div class="accent-line col">
+            <div class="wrapper-sm flow">
+                <h2>Experience the Power of Essentia</h2>
+                <p>Discover firsthand how Essentia can transform your energy consumption patterns and drive sustainability. Schedule a demo today and let us guide you through the features, benefits, and potential savings for your home or business.</p>
+                <a class="btn btn--primary" href="/schedule-demo/">Schedule a Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta cta--split columns bg-white" aria-labelledby="shape-the-future-of-energy-with-us">
+    <div class="cta__content block margin-block-auto col">
+      <div class="wrapper-sm flow">
+        <h2 class="h1" id="shape-the-future-of-energy-with-us">Shape the Future of Energy with Us</h2>
+        <p>At Essentia, we believe in the power of innovation and collaboration. Join a team of forward-thinkers, driven by the mission to revolutionize energy consumption and sustainability. If you’re passionate about making a difference, we want you on board.</p>
+      </div>
+    </div>
+    <div class="cta__image col">
+        <img src="/uploads/five-people-on-laptops-working-together-1.jpg" alt="Trees with sunshine shining through branches" width="1200" height="800">
+    </div>
+</section>
+{{ end }}

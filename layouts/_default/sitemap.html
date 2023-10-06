@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="sitemap-content block">
+    <div class="wrapper-md">
+        <h1>Sitemap</h1>
+        <div class="columns">
+            <div class="col">
+                <h2>Pages</h2>
+                <ul>
+                    {{ range where .Site.Pages "Type" "not in" (slice "blog" "categories" "tags") }}
+                        {{ if not (in (slice "Thank You") .Title) }}
+                            <li>
+                                <a href="{{ .RelPermalink }}" title="{{ .Name }}">{{ .Name | markdownify }}</a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Posts</h2>
+                <ul>
+                    {{ $pages := .Site.RegularPages }}
+                    {{ $blog := where $pages "Type" "blog" }}
+                    {{ range $blog }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

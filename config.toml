@@ -1,0 +1,29 @@
+baseURL = "https://modest-polar.cloudvent.net"
+languageCode = "en-us"
+title = "Essentia"
+enableRobotsTXT = true
+paginate = "9"
+summaryLength = 20
+
+#################### default parameters ################################
+
+[params]
+  minifyBundles = true
+  imgixDomain = ""
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[markup.goldmark.renderer]
+  unsafe= true
+
+[module]
+replacements = "components.local -> ../component-library"
+
+[[module.imports]]
+path = 'components.local'
+
+[[module.imports]]
+path = 'github.com/cloudcannon/bookshop/hugo/v3'

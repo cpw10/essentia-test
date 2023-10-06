@@ -1,0 +1,96 @@
+.btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: $secondary-font;
+  font-size: $ic--200;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: $ic-100 $ic-400;
+  text-decoration: none;
+  transition: $transition;
+  inline-size: max-content;
+  border-radius: $radius;
+
+  @include breakpoint(sm) {
+    font-size: $ic--100;
+  }
+}
+
+.btn--primary,
+.btn--secondary {
+  transition: $transition;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    z-index: -1;
+    background-size: 300% 100%;
+    border-radius: $radius;
+    transition: $transition;
+  }
+
+  &:hover,
+  &:focus {
+
+    &::before {
+      background-position: 100% 0;
+    }
+  }
+}
+
+.btn--primary {
+  color: $black;
+
+  &::before {
+    background-image: linear-gradient(to right,$primary-color 0%,$secondary-color 15%,$secondary-color 85%,$primary-color 100%);
+  }
+}
+
+.btn--secondary {
+  color: $white;
+
+  &::before {
+    background-image: linear-gradient(to right,$black 0%,$black-2 15%,$black-2 85%,$black 100%);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn--filter {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: $transition;
+
+  svg {
+    fill: $primary-color;
+    inline-size: $ic-400;
+    block-size: $ic-400;
+    margin-right: $ic-400;
+    position: relative;
+    inset-block-start: -1px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+
+  @include breakpoint(sm) {
+    margin: 0;
+  }
+}
+
+.btn--category {
+  padding: 0.5rem;
+}

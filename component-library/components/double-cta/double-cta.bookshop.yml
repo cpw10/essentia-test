@@ -1,0 +1,32 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Double CTA"
+  description: Two column double call to action block
+  icon: notifications
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  cta_left: 
+    heading: ""
+    body: ""
+    button:
+      enabled: false
+      button_url: 
+      button_text: 
+      open_in_new_tab: false
+  cta_right: 
+    heading: ""
+    body: ""
+    button:
+      enabled: false
+      button_url: 
+      button_text: 
+      open_in_new_tab: false
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

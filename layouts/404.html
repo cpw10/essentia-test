@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="hero--blog block bg-black" aria-labelledby="hero-heading">
+    <div class="wrapper-sm text-align-center flow">
+      <h1 class="max-width-none" id="hero-heading">{{ .Title }}</h1>
+    </div>
+  </section>
+<section class="block">
+    <div class="wrapper-sm">
+        <p>The page you've requested does not exist, or is unavailable at this time. Our website has recently been redesigned so if you tried to load a bookmarked page, or followed a link from another website, it's possible that the page you've requested has been moved. Use the navigation menu to locate the information you are looking for. <a href="{{ "/" | relURL }}">Go back to the homepage.</a></p>
+    </div>
+</section>
+{{ end }}

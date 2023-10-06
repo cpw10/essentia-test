@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  max-inline-size: $measure;
+}
+
+html,
+body,
+div,
+section,
+picture,
+header,
+nav,
+main,
+footer,
+table,
+.max-width-none {
+  max-inline-size: none;
+}
+
+body {
+  font-family: $primary-font;
+  color: $black;
+  scrollbar-width: $scrollbar-width;
+  scrollbar-color: $light-gray;
+}
+
+main:focus {
+  outline: none;
+}
+
+.site-main {
+  position: relative;
+  margin-top: $mobile-header;
+
+  @include breakpoint(md) {
+    margin-top: $desktop-header;
+  }
+}
+
+// Style highlight to match our themes colors
+::-moz-selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}
+
+::selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}
+
+::-ms-selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}
+
+body::-webkit-scrollbar {
+  width: $scrollbar-width;
+}
+
+body::-webkit-scrollbar-track {
+  background: $light-gray;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+}

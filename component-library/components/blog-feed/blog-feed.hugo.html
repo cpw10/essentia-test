@@ -1,0 +1,44 @@
+{{ if site.Params.env_bookshop_live }}
+<section class="block bg-gray">
+    <div class="wrapper-lg flow">
+        <h2 class="text-align-center max-width-none">Our Recent Posts</h2>
+        <p class="text-align-center margin-inline-auto">This is just a placeholder to show you what your blog feed will look like. Blog posts cannot be edited here and need to be edited in the blog section of your website.</p>
+        <div class="block-md">
+            <ul class="auto-grid gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="card">
+                    <div class="accent-line flow">
+                        <a class="card__category" href="#" aria-label="View all posts">Example</a>
+                        <h3 class="card__title h6"><a href="#" class="card__link">Blog Post Title</a></h3>
+                        <p class="card__summary font-size-xs">
+                            Your actual blog posts will be displayed on the page rather than these example cards which cannot be edited here.
+                        </p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ else }}
+<section class="block bg-{{ .background_color }}" aria-label="Featured Articles">
+    <div class="wrapper-lg flow">
+        <h2 class="text-align-center max-width-none">{{ .heading }}</h2>
+        <p class="text-align-center margin-inline-auto">{{ .body | markdownify }}</p>
+        <div class="block-md">
+            <ul class="auto-grid gap-sm max-width-none no-margin no-padding">
+                {{ range where site.RegularPages "Section" "blog" | first 3 }}
+                    {{ .Render "blog-card" }}
+                {{- end -}}
+            </ul>
+        </div>
+        <div class="text-align-center">
+            {{ if .button.enabled }}
+              {{ with .button }}
+                  <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+              {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,13 @@
+<li class="card">
+    <article class="accent-line flow">
+        {{ if .Params.Categories }}
+            {{ range (.GetTerms "categories") }}
+                <a class="card__category" href="{{ .Permalink }}" aria-label="View all {{ .LinkTitle }} posts">{{ .LinkTitle }}</a>
+            {{ end }}
+        {{ end }}
+        <h3 class="card__title h6"><a href="{{ .Permalink }}" class="card__link">{{ .Title }}</a></h3>
+        <p class="card__summary font-size-xs">
+        {{ if .Params.seo.meta_description }}{{ .Params.seo.meta_description | safeHTML }}{{ else }}{{ .Summary  | safeHTML }}{{ end }}
+        </p>
+    </article>
+</li>

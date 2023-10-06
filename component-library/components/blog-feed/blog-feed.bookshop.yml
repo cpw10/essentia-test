@@ -1,0 +1,24 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Blog Feed"
+  description: Blog feed block
+  icon: post_add
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  body: ""
+  button:
+    enabled: true
+    button_url: /blog/
+    button_text: View All Posts
+    open_in_new_tab: false
+  background_color:
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

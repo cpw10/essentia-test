@@ -1,0 +1,34 @@
+{{ if site.Params.env_bookshop_live }}
+<section class="block bg-gray">
+    <div class="wrapper-lg flow">
+        <h2 class="text-align-center max-width-none">Open Positions</h2>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="card">
+                    <div class="accent-line flow">
+                        <h3 class="card__title h6"><a href="#" class="card__link">Job Position Title</a></h3>
+                        <p class="card__summary font-size-xs">
+                            Your actual job opening will be displayed on the page rather than these example cards which cannot be edited here.
+                        </p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ else }}
+<section class="block bg-{{ .background_color }}" aria-label="Job Openings">
+    <div class="wrapper-lg flow">
+        <h2 class="text-align-center max-width-none">{{ .heading }}</h2>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range where site.RegularPages "Section" "careers" }}
+                    {{ .Render "blog-card" }}
+                {{- end -}}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ end }}

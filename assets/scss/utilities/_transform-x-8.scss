@@ -1,0 +1,9 @@
+.transform-x-8 {
+    display: block; 
+    transition: $transition;
+    
+    &:hover,
+    &:focus {
+      transform: translateX(8px);
+    }
+}

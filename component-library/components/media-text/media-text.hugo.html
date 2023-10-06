@@ -1,0 +1,20 @@
+<section class="media-text-block {{ if eq .text_column_position "left" }}media-text-block--text-left{{ else }}media-text-block--text-right{{ end }} block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="wrapper-lg columns gap-md">
+        <div class="media-text-block__content block margin-block-auto col flow">
+            <h2 id="{{ .heading | urlize }}">{{ .heading }}</h2>
+            <p>{{ .body | markdownify }}</p>
+            {{ if .button.enabled }}
+              {{ with .button }}
+                  <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+              {{ end }}
+            {{ end }}
+        </div>
+        <div class="decorative-image col">
+            <img class="decorative-image__image rounded-image" src="{{ .image.image_url }}" alt="{{ .image.image_alt }}" width="600" height="400">
+            {{ if .decorative_image.enabled }}
+                <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+            {{ end }}
+        </div>
+    </div>
+</section>
+  

@@ -1,0 +1,19 @@
+blockquote {
+  background-color: $light-gray;
+  border-left: 6px solid $primary-color;
+  padding: $ic-300;
+  margin: 0;
+
+  p + p {
+    margin-top:$ic-200;
+  }
+
+  cite {
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .8;
+  }
+}

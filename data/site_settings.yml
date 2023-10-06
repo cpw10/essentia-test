@@ -1,0 +1,26 @@
+logo: /uploads/essentia-logo.svg
+footer_logo: /uploads/essentia-logo.svg
+business_name: Essentia
+phone: 555-555-5555
+fax: 
+email: email@emailaddress.com
+address:
+  city: Green Bay
+  state: WI
+  street: 1816 Sal St.
+  zip: 54302
+google_maps_url: https://www.google.com/maps
+google_maps_iframe: <iframe title="Google maps location of Insight Creative, Inc. in Green Bay WI" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11385.733072687639!2d-87.9928414!3d44.4857883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802e4dd4df188dd%3A0xcaf53222c81d4a5c!2sInsight%20Creative%2C%20Inc.!5e0!3m2!1sen!2sus!4v1680661926581!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+social_media:
+  - title: Facebook
+    link: https://www.facebook.com/insightcreativeinc
+  - title: LinkedIn
+    link: https://www.linkedin.com/company/insight-creative-inc./mycompany/
+  - title: YouTube
+    link: https://www.youtube.com/channel/UCDE7J9ImgM3JVgT030sM3VA
+  - title: Instagram
+    link: https://www.instagram.com/insightwi/
+  - title: Twitter
+    link: https://twitter.com/insightwi
+  - title: TikTok
+    link: https://www.tiktok.com/

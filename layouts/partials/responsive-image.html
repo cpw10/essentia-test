@@ -1,0 +1,9 @@
+<picture>
+    <source sizes="(min-width: 62rem) 50vw, 100vw" srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=avif&q=75&width=400&height=250&fit=crop 400w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=avif&q=75&width=600&height=450&fit=crop 600w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=avif&q=75&width=800&height=500&fit=crop 800w" type="image/avif">
+
+    <source sizes="(min-width: 62rem) 50vw, 100vw" srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=webp&q=75&width=400&height=250&fit=crop 400w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=webp&q=75&width=600&height=450&fit=crop 600w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=webp&q=75&width=800&height=500&fit=crop 800w" type="image/webp">
+
+    <source sizes="(min-width: 62rem) 50vw, 100vw" srcset="https://stadium-bike.imgix.net{{ .image.image_url }}?fm=jpg&q=75&width=400&height=250&fit=crop 400w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=jpg&q=75&width=600&height=450&fit=crop 600w, https://stadium-bike.imgix.net{{ .image.image_url }}?fm=jpg&q=75&width=800&height=500&fit=crop 800w" type="image/jpg">
+
+    <img src="{{ .image.image_url }}" alt="{{ .image_alt }}" width="600" height="450">   
+</picture>

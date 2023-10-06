@@ -1,0 +1,27 @@
+<section class="cta cta--double block" aria-labelledby="{{ .cta_left.heading | urlize }}">
+    <div class="wrapper-lg columns gap-lg">
+        <div class="accent-line col">
+            <div class="wrapper-sm flow">
+                <h2 id="{{ .cta_left.heading | urlize }}">{{ .cta_left.heading }}</h2>
+                <p>{{ .cta_left.body | markdownify }}</p>
+                {{ if .cta_left.button.enabled }}
+                    {{ with .cta_left.button }}
+                        <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        <div class="accent-line col">
+            <div class="wrapper-sm flow">
+                <h2>{{ .cta_right.heading }}</h2>
+                <p>{{ .cta_right.body | markdownify }}</p>
+                {{ if .cta_right.button.enabled }}
+                    {{ with .cta_right.button }}
+                        <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+  

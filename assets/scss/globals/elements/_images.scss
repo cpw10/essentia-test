@@ -1,0 +1,49 @@
+img {
+  display: block;
+  max-inline-size: 100%;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.background-image {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  display: block;
+
+  img {
+    object-fit: cover;
+    block-size: auto;
+    inline-size: 100%;
+    position: relative;
+
+    @include breakpoint(md) {
+      block-size: 100%;
+    }
+  }
+}
+
+.cover-image {
+  inline-size: 100%;
+  display: block;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
+.cover {
+  max-inline-size: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.rounded-image {
+  border-radius: $ic-300;
+}

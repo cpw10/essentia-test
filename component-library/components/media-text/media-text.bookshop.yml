@@ -1,0 +1,30 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Media & Text"
+  description: Media & text block
+  icon: perm_media
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  body: ""
+  image:
+    image_url:
+    image_alt:
+  button:
+    enabled: true
+    button_url: 
+    button_text: 
+    open_in_new_tab: false
+  background_color: gray
+  decorative_image: 
+    enabled: true
+  text_column_position: left
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

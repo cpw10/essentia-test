@@ -1,0 +1,12 @@
+{{ $imageURL := .Get "image_url" }}
+{{ $imageAlt := .Get "image_alt" }}
+
+<picture>
+  <source sizes="(min-width: 993px) 50vw, 100vw" srcset="https://milksource.imgix.net{{ $imageURL }}?fm=avif&q=75&width=400&height=267 400w, https://milksource.imgix.net{{ $imageURL }}?fm=avif&q=75&width=600&height=400 600w, https://milksource.imgix.net{{ $imageURL }}?fm=avif&q=75&fit=crop&w=800&h=533 800w" type="image/avif">
+
+  <source sizes="(min-width: 993px) 50vw, 100vw" srcset="https://milksource.imgix.net{{ $imageURL }}?fm=webp&q=75&width=325&height=267 400w, https://milksource.imgix.net{{ $imageURL }}?fm=webp&q=75&width=600&height=400 600w, https://milksource.imgix.net{{ $imageURL }}?fm=webp&q=75&fit=crop&w=800&h=533 800w" type="image/webp">
+
+  <source sizes="(min-width: 993px) 50vw, 100vw" srcset="https://milksource.imgix.net{{ $imageURL }}?fm=jpg&q=75&width=325&height=250 400w, https://milksource.imgix.net{{ $imageURL }}?fm=jpg&q=75&width=600&height=400 600w, https://milksource.imgix.net{{ $imageURL }}?fm=jpg&q=75&fit=crop&w=800&h=533 800w" type="image/jpg">
+
+  <img src="{{ $imageURL }}" width="600" height="450" alt="{{ $imageAlt }}">   
+</picture>

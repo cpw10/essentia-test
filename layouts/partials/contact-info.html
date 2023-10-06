@@ -1,0 +1,36 @@
+<div class="contact-sidebar flow">
+  {{ if .Site.Data.site_settings.google_maps_iframe }}
+    {{ .Site.Data.site_settings.google_maps_iframe | safeHTML }}
+  {{ end }}
+  <div class="contact-info__contact">
+    {{ if .Site.Data.site_settings.business_name }}
+      <h2>{{ .Site.Data.site_settings.business_name }}</h2>
+    {{ end }}
+    {{ if .Site.Data.site_settings.address.street }}
+    <address>
+      {{ .Site.Data.site_settings.address.street }}
+      <br>
+      {{ .Site.Data.site_settings.address.city }}, {{ .Site.Data.site_settings.address.state }} {{ .Site.Data.site_settings.address.zip }}
+    </address>
+    {{ end }}
+    {{ if .Site.Data.site_settings.google_maps_url }}
+      <a href="{{ .Site.Data.site_settings.google_maps_url }}" rel="noopener noreferrer" target="_blank">View on Google Maps</a>
+    {{ end }}
+  </div>
+  {{ if .Site.Data.site_settings.phone }}
+    <div>
+      <small>Phone</small><br><a href="tel:{{ .Site.Data.site_settings.phone }}">{{ .Site.Data.site_settings.phone }}</a>
+    </div>
+  {{ end }}
+  {{ if .Site.Data.site_settings.fax }}
+    <div>
+      <small>Fax</small><br>{{ .Site.Data.site_settings.fax }}
+    </div>
+  {{ end }}
+  {{ if .Site.Data.site_settings.email }}
+    <div>
+      <small>Email</small><br><a href="mailto:{{ .Site.Data.site_settings.email }}?subject=New%20Email%20From%20the%20Essentia%20Website" target="_blank">{{ .Site.Data.site_settings.email }}</a>
+    </div>
+  {{ end }}
+  <div>{{ partialCached "social-media" . }}</div>
+</div>

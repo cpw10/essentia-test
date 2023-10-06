@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "bookshop_bindings" `.Params.content_blocks` }}
+{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+<section class="block">
+    <div class="wrapper-sm">
+      {{ if eq .Title "Schedule Demo" }}
+        {{ partial "forms/schedule-demo-form" . }}
+      {{ else }}
+        {{ partial "forms/application-form" . }}
+      {{ end }}
+    </div>
+</section>
+{{ end }}

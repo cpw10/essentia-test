@@ -1,0 +1,39 @@
+details {
+    border: 1px solid $light-gray;
+    border-radius: $radius;
+    padding: $ic-100;
+    cursor: pointer;
+
+    summary::marker {
+        color: $primary-color;
+    }
+}
+
+/* Hide default arrow */
+details > summary::-webkit-details-marker {
+    display: none;
+}
+  
+details > summary {
+    position: relative;
+    list-style: none;
+}
+
+details > summary:before {
+    content: '';
+    display: inline-block;
+    inline-size: 0;
+    block-size: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $white;
+    position: absolute;
+    inset-block-end: 10px;
+    inset-inline-end: 0;
+    transition: transform $transition;
+}
+  
+/* Change marker when details is open */
+details[open] > summary:before {
+    transform: rotate(180deg);
+}

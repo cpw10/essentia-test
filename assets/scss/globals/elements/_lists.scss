@@ -1,0 +1,8 @@
+ul li + li,
+ol li + li {
+  margin-top:$ic-100;
+}
+
+.list-style-none {
+  list-style-type: none;
+}

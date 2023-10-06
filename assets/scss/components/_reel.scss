@@ -1,0 +1,64 @@
+.testimonials__content,
+.reel {
+  grid-column: 2 / -1;
+
+  @include breakpoint(md) {
+    grid-column: 4 / -1;
+  }
+}
+
+.reel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(300px, 50vw, 500px);
+  gap: $ic-600;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #1F2526 #EBF1F2;
+}
+
+.reel > * {
+  scroll-snap-align: start;
+}
+
+.reel:focus-visible {
+  outline: 4px solid $primary-color;
+}
+
+.reel::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: #1F2526;
+}
+
+.reel::-webkit-scrollbar-thumb:hover,
+.reel::-webkit-scrollbar-thumb:active {
+  background-color: #2A3334;
+  cursor: pointer;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: #EBF1F2;
+}
+
+.reel__testimonial {
+  border-right: 2px solid $primary-color;
+  margin-block: $ic-800;
+}
+
+.reel__body {
+  max-inline-size: 30ch;
+  margin-block-end: $ic-600;
+  margin-inline-end: $ic-300;
+}
+
+.reel__image {
+  block-size: 100px;
+  inline-size: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-block-end: $ic-200;
+}

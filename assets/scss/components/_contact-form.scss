@@ -1,0 +1,47 @@
+.contact-form__row-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+
+    .contact-form__form-group {
+      flex: 50%;
+    }
+
+    .contact-form__form-group:nth-of-type(2) {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.contact-form__form-group label {
+  font-weight: 700;
+}
+
+.contact-form__btn {
+  border: none;
+}
+
+.contact-form__form-group input,
+.contact-form__form-group textarea,
+.contact-form__form-group select {
+  border: 1px solid $black;
+  border-radius: $radius;
+  inline-size: 100%;
+  padding: $ic-100 $ic-200;
+  margin-bottom: $ic-100;
+  block-size: $ic-700;
+
+  &:focus {
+    outline: 2px solid $primary-color;
+  }
+}
+
+.contact-form__form-group textarea {
+  block-size: $ic-1000;
+}
+
+form.hidden {
+  display: none;
+}

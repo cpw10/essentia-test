@@ -1,0 +1,61 @@
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+  
+    .col {
+      flex-grow: 1;
+      // Adjust the below px value to your desired breakpoint if needed
+      // Note: Hugo's toCSS errors with a min() here so it is wrapped in an extra calc()
+      flex-basis: calc(min(100%, 400px)); 
+    }
+}
+
+.columns-two-thirds-right {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+        flex-wrap: nowrap;
+    }
+
+    .col:nth-of-type(1) {
+        flex-basis: 100%;
+
+        @include breakpoint(sm) {
+            flex-basis: 33.33%;
+        }
+    }
+
+    .col:nth-of-type(2) {
+        flex-basis: 100%;
+
+        @include breakpoint(sm) {
+            flex-basis: 66.66%;
+        }
+    }
+}
+
+.columns-two-thirds-left {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+        flex-wrap: nowrap;
+    }
+
+    .col:nth-of-type(1) {
+        flex-basis: 100%;
+
+        @include breakpoint(sm) {
+            flex-basis: 66.66%;
+        }
+    }
+
+    .col:nth-of-type(2) {
+        flex-basis: 100%;
+
+        @include breakpoint(sm) {
+            flex-basis: 33.33%;
+        }
+    }
+}

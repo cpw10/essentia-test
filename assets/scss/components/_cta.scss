@@ -1,0 +1,11 @@
+.cta--split .cta__image img {
+    aspect-ratio: 3/2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+.cta--split .cta__content {
+    padding-inline: 5%;
+    padding-inline: clamp($ic-300, 5%, $ic-1000);
+}

@@ -1,0 +1,16 @@
+{
+    "defaults": {
+    "timeout": 100000,
+    "wait": 1000,
+    "standard": "WCAG2AA"
+      },
+      "urls": [
+      "http://localhost:1313/",
+      "http://localhost:1313/about/",
+      "http://localhost:1313/careers/",
+      "http://localhost:1313/blog/",
+      "http://localhost:1313/services/",
+      "http://localhost:1313/contact/"
+      "http://localhost:1313/schedule-demo/"
+      ]
+  }

@@ -1,0 +1,28 @@
+{{ if or .PrevInSection .NextInSection }}
+<div class="wrapper-lg">
+    <div class="post-navigation flex flex-column flex-row-md flex-center flex-justify-between border-top-gray">
+        <div class="post-navigation__back flex flex-column flex-center">
+            {{ if eq .Section "careers" }}
+            <a href="/careers/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all careers</a>
+            {{ else if eq .Section "about" }}
+            <a href="/about/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all staff</a>
+            {{ else }}
+            <a href="/blog/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all posts</a>
+            {{ end }}
+        </div>
+        <div class="flex flex-center flex-justify-between">
+            <div class="post-navigation__prev">
+                {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="post-navigation__link bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Previous</a>
+                {{ end }}
+            </div>
+            <div> / </div>
+            <div class="post-navigation__next">
+                {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="post-navigation__link bounce-right flex flex-center">Next <div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-right.svg" . }}</div></a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

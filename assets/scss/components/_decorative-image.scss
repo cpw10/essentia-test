@@ -1,0 +1,51 @@
+.decorative-image {
+    position: relative;
+}
+
+.decorative-image__image {
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 3/2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+.decorative-image .decorative-image__circles {
+    inset-block-start: 25px;
+    inset-inline-end: -50px;
+
+    @include breakpoint(md) {
+        inset-block-start: 50px;
+    }
+}
+
+.decorative-image__circles {
+    position: absolute;
+    z-index: 1;
+    inline-size: auto;
+    block-size: 100%;
+}
+  
+.hero .decorative-image__circles {
+    inset-block-start: 0;
+    inset-inline-start: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.staff-image {
+    aspect-ratio: 1/1;
+    max-inline-size: 500px;
+    margin-inline: auto;
+
+    @include breakpoint(md) {
+        margin-top: -250px;
+    }
+}
+
+@include breakpoint(md) {
+    .parent-page-about:not(.page-about) .decorative-image .decorative-image__circles {
+        inset-block-start: 75px;
+    }
+}

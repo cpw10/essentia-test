@@ -1,0 +1,12 @@
+.grid-columns-4 {
+    display: grid;
+  
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

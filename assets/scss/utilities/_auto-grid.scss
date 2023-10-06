@@ -1,0 +1,4 @@
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(100%/4 + 0.1%, 400px, 100%), 1fr));
+}

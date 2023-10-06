@@ -1,0 +1,20 @@
+<section class="testimonials block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="grid">
+        <div class="testimonials__content">
+            <h2 id="{{ .heading | urlize }}">{{ .heading }}</h2>
+            <p>{{ .body | markdownify }}</p>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="reel p-relative" tabindex="0">
+            {{ range .testimonials }}
+            <div class="reel__testimonial">
+                <p class="reel__body">"{{ .body | markdownify }}"</p>
+                <img class="reel__image" src="{{ .image }}" alt="Headshot of {{ .title }}, {{ .name }}">
+                <p class="text-style-slub">{{ .name }}</p>
+                <p class="font-size-xs">{{ .title }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+@import "globals/variables";
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+.site-header,
+.nav-list,
+.nav-list__dropdown {
+  background-color: $black;
+}
+
+.nav-list__link {
+  color: $white;
+}
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+  background-color: $white;
+}
+
+.text-primary,
+a {
+  color: #476cb5;
+}
+
+.btn-secondary {
+  &:hover,
+  &:focus {
+    background-color: $black;
+  }
+}

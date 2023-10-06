@@ -1,0 +1,10 @@
+{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $small := $image.Resize "600x" }}
+{{ $medium := $image.Resize "900x" }}
+{{ $big := $image.Resize "1200x" }}
+{{ $alt := .PlainText | safeHTML }}
+<figure>
+    <img loading="lazy" sizes="100vw"
+        srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $big.RelPermalink }} 1024w"
+        src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $alt }}">
+</figure>

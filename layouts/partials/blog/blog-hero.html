@@ -1,0 +1,33 @@
+<section class="hero--simple hero--blog block bg-black" aria-labelledby="hero-heading">
+  <div class="wrapper-lg columns gap-md">
+      <div class="hero__content col margin-block-auto">
+        <a href="/blog/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all posts</a>
+        <h1 id="hero-heading">{{ .Title | markdownify }}</h1>
+        <div class="flex flex-column flex-row-md flex-justify-between-md gap-sm">
+          <div class="flex flex-wrap gap-sm">
+          {{ if .Params.Categories }}
+            {{ range first 2 (.GetTerms "categories") }}
+                <a href="{{ .Permalink }}" class="btn btn--primary btn--category" aria-label="View all {{ .Page.Title }} posts">{{ .LinkTitle }}</a>
+            {{ end }}
+          {{ end }}
+          </div>
+          <div class="reading-time flex flex-center">
+            <div class="icon-md">{{ partialCached "svg-icons/clock.svg" . }}</div>
+            <div class="font-size-xs"> {{ .ReadingTime }} min read</div>
+          </div>
+        </div>
+      </div>
+      <div class="decorative-image col">
+        <img class="decorative-image__image rounded-image" src="{{ .Params.seo.featured_image }}" alt="" width="1200" height="800">
+        <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+      </div>
+  </div>
+</section>
+{{ if .TableOfContents }}
+<details class="toc bg-black-2">
+  <summary class="toc__summary margin-inline-auto">In This Article</summary>
+  <div class="toc__list">
+    {{ .TableOfContents }}
+  </div>
+</details>
+{{ end }}

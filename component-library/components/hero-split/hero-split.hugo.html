@@ -1,0 +1,16 @@
+<section class="hero hero--split-hero columns gap-md block" aria-labelledby="hero-heading">
+  <div class="hero__content margin-block-auto col block">
+    <div class="accent-line wrapper-sm flow">
+      <h1 class="no-margin" id="hero-heading">{{ .heading }}</h1>
+      <p>{{ .body | markdownify }}</p>
+      {{ if .button.enabled }}
+        {{ with .button }}
+            <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="hero__image col">
+    <img class="rounded-image" src="{{ .image.image_url }}" alt="{{ .image.image_alt }}" width="1800" height="600">
+  </div>
+</section>

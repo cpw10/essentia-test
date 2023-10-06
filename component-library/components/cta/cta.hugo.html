@@ -1,0 +1,18 @@
+<section class="cta cta--split columns bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="cta__content block margin-block-auto col">
+      <div class="accent-line wrapper-sm flow">
+        <h2 class="h1" id="{{ .heading | urlize }}">{{ .heading }}</h2>
+        <p>{{ .body | markdownify }}</p>
+        {{ if .button.enabled }}
+            {{ with .button }}
+                <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+            {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="cta__image col">
+        <img src="{{ .image.image_url }}" alt="{{ .image.image_alt }}" width="1200" height="800">
+    </div>
+</section>
+  
+  

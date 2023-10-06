@@ -1,0 +1,29 @@
+.post-navigation {
+  padding: $ic-300 0 $ic-300 0;
+}
+
+.post-navigation__next {
+  margin-left: $ic-600;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.post-navigation__prev {
+  margin-right: $ic-600;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.post-navigation svg {
+  transition: $transition;
+}

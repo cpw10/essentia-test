@@ -1,0 +1,15 @@
+// Great for a simple two column layout
+
+.split-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .col {
+    flex-grow: 1;
+    flex-shrink: 1;
+    // Adjust this value depending on where you want your columns to break
+    flex-basis: 450px;
+  }
+}

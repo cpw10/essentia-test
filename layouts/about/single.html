@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="hero--staff hero--simple block bg-black" aria-labelledby="hero-heading">
+    <div class="wrapper-lg">
+        <div class="hero__content">
+            <div class="accent-line wrapper-lg">
+                <a href="/about/" class="bounce-left flex flex-center"><div class="icon-md icon-stroke-primary">{{ partialCached "svg-icons/chevron-left.svg" . }}</div> Back to all staff</a>
+                <h1 class="no-margin" id="hero-heading">{{ .Title }}</h1>
+                <p class="text-style-slub">{{ .Params.job_title }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="block">
+    <div class="wrapper-lg columns gap-md">
+        <div class="col flow">
+            <h2>About {{ .Title }}</h2>
+            {{ .Content  }}
+        </div>
+        <div class="decorative-image staff-image col">
+            <img class="decorative-image__image rounded-image" src="{{ .Params.headshot }}" alt="Headshot of {{ .Params.job_title }} {{ .Title }}" width="800" height="800">
+            <img class="decorative-image__circles background-circles" src="/uploads/circles-background-square.svg" alt="">
+        </div>
+    </div>
+</div>
+{{ partial "post-navigation" . }}
+{{ end }}

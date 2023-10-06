@@ -1,0 +1,229 @@
+collections_config:
+  pages:
+    output: true
+    icon: notes
+    _enabled_editors:
+      - visual
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  blog:
+    output: true
+    icon: notes
+    _editables: {}
+    _inputs: {}
+    _select_data: {}
+    _structures: {}
+    add_options:
+      - name: Add A New Blog Post
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: schemas/blog.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
+  careers:
+    output: true
+    icon: notes
+    add_options:
+      - name: Add New Job Post
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: schemas/careers.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
+  about:
+    output: true
+    icon: notes
+    add_options:
+      - name: Add New Team Member
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: schemas/staff.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
+_inputs:
+  menu:
+    type: auto
+    hidden: true
+    cascade: true
+  layout:
+    type: auto
+    hidden: true
+    cascade: true
+  logo:
+    type: image
+    comment: Set your brand logo.
+    cascade: true
+  footer_logo:
+    type: image
+    comment: Set your brand logo in the footer.
+    cascade: true
+  featured_image:
+    type: image
+    options:
+      correct_orientation: true
+      resize_style: contain
+    comment: >-
+      Set your featured image. Featured images are used as your SEO preview
+      image when shared on social media or when your page is found in organic
+      search results. The featured image is also displayed with your blog posts.
+    cascade: true
+  hero.image_url:
+    type: image
+    options:
+      accepts_mime_types:
+        - image/jpeg
+      correct_orientation: true
+    comment: This is the main image used at the top of every page.
+    cascade: true
+  image_url:
+    type: image
+    options:
+      accepts_mime_types:
+        - image/jpeg
+      correct_orientation: true
+    comment: >-
+      Upload a .jpg image. Make sure to check the documentation for image
+      handling best practices before adding images to the website.
+    cascade: true
+  headshot:
+    type: image
+    options:
+      accepts_mime_types:
+        - image/jpeg
+        - image/svg+xml
+      correct_orientation: true
+    cascade: true
+  icon:
+    type: image
+    options:
+      accepts_mime_types:
+        - image/jpeg
+        - image/svg+xml
+      correct_orientation: true
+    cascade: true
+  heading:
+    type: text
+    cascade: true
+  background_color:
+    type: select
+    options:
+      allow_empty: true
+      values:
+        - black
+        - gray
+        - white
+    comment: Choose between black, gray, or white as a background color
+    cascade: true
+  text_align:
+    type: select
+    options:
+      allow_empty: true
+      values:
+        - start
+        - center
+        - end
+    comment: Choose between start, center or end text alignments.
+    cascade: true
+  text_column_position:
+    type: select
+    options:
+      allow_empty: true
+      values:
+        - left
+        - right
+    comment: Choose between left and right text column position
+    cascade: true
+  body:
+    type: markdown
+    cascade: true
+  cta.body:
+    type: markdown
+    cascade: true
+  button.button_url:
+    type: url
+    cascade: true
+  hero.button_url:
+    type: url
+    cascade: true
+  weight:
+    type: number
+    comment: >-
+      The weight value here will set the order in which your staff will be
+      displayed.
+    cascade: true
+_select_data: {}
+_structures: {}
+_editables:
+  text:
+    italic: true
+  block:
+    format: p h3
+    image_size_attributes: true
+    redo: true
+    undo: true
+  content:
+    blockquote: true
+    bold: true
+    bulletedlist: true
+    embed: true
+    format: p h2 h3 h4 h5 h6 pre address div
+    horizontalrule: true
+    image_size_attributes: true
+    italic: true
+    link: true
+    numberedlist: true
+    redo: true
+    snippet: true
+    strike: true
+    subscript: true
+    superscript: true
+    table: true
+    underline: true
+    undo: true
+data_config: {}
+timezone: Etc/UTC
+_snippets:
+  responsive_image:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      view: gallery
+      text: Responsive Image
+      subtext: Full-width image with optimized srcset
+      gallery:
+        image:
+          - key: image_url
+        fit: cover
+    definitions:
+      shortcode_name: responsive-image
+      named_args:
+        - editor_key: image_url
+          type: string
+        - editor_key: image_alt
+          type: string
+    _inputs:
+      image_url:
+        type: image
+        cascade: true
+      image_alt:
+        type: text
+        cascade: true

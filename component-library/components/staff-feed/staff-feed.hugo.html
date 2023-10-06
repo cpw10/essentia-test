@@ -1,0 +1,37 @@
+{{ if site.Params.env_bookshop_live }}
+<section class="block bg-gray">
+    <div class="wrapper-lg flow text-align-center">
+        <h2 class="max-width-none">Our Staff</h2>
+        <p class="margin-inline-auto">This is just a placeholder to show you what your staff feed will look like. Staff cannot be edited here and need to be edited in the about section of your website.</p>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="image-card">
+                    <div class="image-card__image">
+                        <img src="/uploads/sophia-martinez.jpg" alt="">
+                    </div>
+                    <div class="image-card__content text-align-center">
+                        <h3 class="no-margin"><a href="#" class="card__link">Example Staff Name</a></h3>
+                        <p class="image-card__job-title">Example Job Title</p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ else }}
+<section class="block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="wrapper-md flow text-align-center">
+        <h2 class="max-width-none" id="{{ .heading | urlize }}">{{ .heading }}</h2>
+        <p class="margin-inline-auto">{{ .body | markdownify }}</p>
+        <div class="block-md">
+            <ul class="grid-columns-3 gap-sm max-width-none no-margin no-padding">
+                {{ range where site.RegularPages "Section" "about" }}
+                    {{ .Render "image-card" }}
+                {{- end -}}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ end }}

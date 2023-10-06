@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: dark) {
+    body {
+       background-color: #0b0907;
+       color: $white;
+    }
+
+    .header__mobile-nav-link,
+    .header__mobile-dropdown-link,
+    .header__nav-list-link,
+    .header__sub-menu-link,
+    .footer a {
+        color: $white;
+    }
+
+    .bg-gray {
+        background-color: $black-2;
+    }
+
+    .bg-white {
+        background-color: #1F1914;
+    }
+
+    .card,
+    .image-card {
+        border: 1px solid $primary-color;
+    }
+
+    .border-top-white,
+    .border-top-gray {
+        border-block-start: 1px solid rgba($white,.15);
+    }
+
+    .contact-form__form-group input,
+    .contact-form__form-group textarea,
+    .contact-form__form-group select {
+        border: 2px solid $primary-color;
+        background-color: $black;
+    }
+}

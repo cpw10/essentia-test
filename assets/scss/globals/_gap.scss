@@ -1,0 +1,24 @@
+.gap-sm {
+  gap: $ic-200;
+  gap: clamp($ic--200, 5vw, $ic-200);
+}
+
+.gap-md {
+  gap: $ic-400;
+  gap: clamp($ic--100, 5vw, $ic-400);
+}
+
+.gap-lg {
+  gap: $ic-600;
+  gap: clamp($ic-100, 5vw, $ic-600);
+}
+
+.gap-xl {
+  gap: $ic-800;
+  gap: clamp($ic-200, 5vw, $ic-800);
+}
+
+.gap-xxl {
+  gap: $ic-1000;
+  gap: clamp($ic-300, 5vw, $ic-1000);
+}

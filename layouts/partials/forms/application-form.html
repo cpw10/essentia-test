@@ -1,0 +1,44 @@
+<form name="job_application" enctype="multipart/form-data" method="post" action="/thank-you/">
+    <div class="visually-hidden">
+        <label for="_subject">New form submission from Essentia contact form</label>
+        <input aria-label="subject" id="_subject" name="_subject" value="New form submission from Essentia contact form"/>
+    </div>
+    <h2>Applicant Information</h2>
+    <div class="contact-form__form-row">
+        <div class="contact-form__row-wrapper">
+            <div class="contact-form__form-group">
+                <label for="first_name">First Name *</label>
+                <input name="First Name" id="first_name" type="text" class="contact-form__form-control" required>
+            </div>
+            <div class="contact-form__form-group">
+                <label for="last_name">Last Name *</label>
+                <input name="Last Name" id="last_name" type="text" class="contact-form__form-control" required>
+            </div>
+        </div>
+    </div>
+    <div class="contact-form__form-row">
+        <div class="contact-form__row-wrapper">
+            <div class="contact-form__form-group">
+                <label for="email">Email *</label>
+                <input name="email" id="email" type="email" class="contact-form__form-control" required>
+            </div>
+            <div class="contact-form__form-group">
+                <label for="phone">Phone *</label>
+                <input name="Phone" id="phone" type="tel" class="contact-form__form-control" required>
+            </div>
+        </div>
+    </div>  
+    <div class="contact-form__form-group">
+      <label for="resume">Resume/Cover Letter*</label>
+      <input aria-label="resume" name="resume" type="file">
+    </div>
+    <div class="contact-form__form-group">
+        <label for="message">Message *</label>
+        <textarea name="Message" id="message" class="contact-form__form-control" rows="4" required></textarea>
+    </div>
+    <input type="hidden" name="inbox_key" value="inbox-key">
+    <input type="text" name="_gotcha" class="visually-hidden" aria-label="gotcha">
+    <div class="h-captcha" data-sitekey=""></div>
+    <br>
+    <button type="submit" class="contact-form__btn btn btn--primary">Send Application</button>
+</form>

@@ -1,0 +1,43 @@
+{{ if site.Params.env_bookshop_live }}
+<section class="block bg-gray">
+    <div class="wrapper-lg flow text-align-center">
+        <h2 class="max-width-none">Our Services</h2>
+        <p class="margin-inline-auto">This is just a placeholder to show you what your services feed will look like. Services cannot be edited here and need to be edited in the Services section of your website.</p>
+        <div class="block-md">
+            <ul class="grid-columns-4 gap-sm max-width-none no-margin no-padding">
+                {{ range seq 3 }}
+                <li class="image-card">
+                    <div class="image-card__image">
+                        <img src="/uploads/home-attic-inspection-1.jpg" alt="">
+                    </div>
+                    <div class="image-card__content">
+                        <h3 class="no-margin"><a href="/services/homeowners/home-energy-audits/" class="card__link">Home Energy Audits</a></h3>
+                        <p class="image-card__job-title text-style-slub"></p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ else }}
+<section class="block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="wrapper-lg flow text-align-center">
+        <h2 class="max-width-none" id="{{ .heading | urlize }}">{{ .heading }}</h2>
+        <p class="margin-inline-auto">{{ .body | markdownify }}</p>
+        <div class="block-md">
+            <ul class="grid-columns-4 gap-sm max-width-none no-margin no-padding">
+                {{ if eq .services_feed "Business" }}
+                    {{ range where site.RegularPages "Params.service_type" "business" }}
+                        {{ .Render "image-card" }}
+                    {{ end }}
+                {{ else if eq .services_feed "Homeowners" }}
+                    {{ range where site.RegularPages "Params.service_type" "homeowners" }}
+                        {{ .Render "image-card" }}
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+{{ end }}

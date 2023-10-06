@@ -1,0 +1,26 @@
+.accent-line {
+    position: relative;
+}
+
+.accent-line::before,
+.accent-line::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: -10px;
+}
+
+.accent-line::before {
+    inset-block-start: 0;
+    block-size: 100%;
+    inline-size: 3px;
+    background-image: linear-gradient($secondary-color 0%, $primary-color 100%);
+}
+
+.accent-line::after {
+    inset-block-end: 0;
+    transform: translateX(-7px);
+    block-size: 16px;
+    inline-size: 16px;
+    border-radius: 50%;
+    background-color: $primary-color;
+}

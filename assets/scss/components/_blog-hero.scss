@@ -1,0 +1,49 @@
+.hero--blog h1 {
+  font-size: $ic-600;
+  font-size: clamp($ic-300, 4vw, $ic-600);
+}
+
+.hero--blog .decorative-image__image {
+  aspect-ratio: 4/2;
+}
+
+.bounce-left,
+.bounce-right {
+  max-inline-size: max-content;
+}
+
+.bounce-left:hover svg,
+.bounce-left:focus svg {
+  animation: animate-arrow-left 1s infinite;
+}
+
+@keyframes animate-arrow-left {
+  0%, 100% {
+      transform: translateX(0%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+      transform: translateX(-25%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.bounce-right:hover svg,
+.bounce-right:focus svg {
+  animation: animate-arrow-right 1s infinite;
+}
+
+@keyframes animate-arrow-right {
+  0%, 100% {
+      transform: translateX(0%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+      transform: translateX(25%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.reading-time {
+  gap: .5rem;
+}

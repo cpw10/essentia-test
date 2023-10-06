@@ -1,0 +1,48 @@
+.share-buttons {
+  border: 1px solid $black; 
+  margin-top:$ic-300;
+
+  @include breakpoint(md) {
+    position: sticky;
+    inset-block-start: 125px;
+    inline-size: 100px;
+    margin-top:0;
+  }
+}
+
+.share-buttons__header {
+  padding: $ic-100;
+}
+
+.share-buttons ul {
+  list-style: none;
+  padding: $ic-100;
+  margin: 0;
+
+  @include breakpoint(md) {
+    margin: $ic-300 0;
+  }
+}
+
+.share-buttons ul svg {
+  block-size: 25px;
+  inline-size: auto;
+  fill: $secondary-color;
+  transition: 0.3s ease;
+}
+
+.share-buttons ul a {
+  padding: 0 $ic-100;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $primary-color;
+    }
+  }
+}
+
+.share-buttons__list-items {
+  margin-top:$ic--200;
+}

@@ -1,0 +1,49 @@
+.footer__logo-wrap {
+  max-inline-size: 200px;
+}
+
+.footer a {
+  color: $black;
+  transition: $transition;
+
+  &:hover, 
+  &:focus {
+    color: $primary-color;
+  }
+}
+
+.footer__nav-item {
+  list-style-type: none;
+  margin-top:0;
+}
+
+.footer__copyright {
+  font-size: $ic--100;
+  padding: $ic-100 0;
+
+  @include breakpoint(md)  {
+    .footer__credits {
+      margin-left: auto;
+    }
+  }
+}
+
+.footer__nav,
+.footer__copyright-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__copyright-item {
+  list-style-type: none;
+  margin: $ic-100;
+
+  @include breakpoint(md)  {
+    margin: 0 0 0 $ic--100;
+  }
+}
+
+.footer .contact-form input {
+  margin-bottom: 0;
+  block-size: $ic-600;
+}

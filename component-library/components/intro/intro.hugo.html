@@ -1,0 +1,11 @@
+<section class="block bg-{{ .background_color }} text-align-{{ .text_align }}" aria-labelledby="{{ .heading | urlize }}">
+    <div class="wrapper-sm flow">
+        <h2 class="max-width-none" id="{{ .heading | urlize }}">{{ .heading }}</h2>
+        <p>{{ .body | markdownify }}</p>
+        {{ if .button.enabled }}
+            {{ with .button }}
+                <a class="btn btn--primary" href="{{ .button_url }}" {{ if .open_in_new_tab }}target="_blank"{{ end }}>{{ .button_text }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+</section>

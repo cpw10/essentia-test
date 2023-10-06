@@ -1,0 +1,14 @@
+<div class="category-wrapper">
+  <button class="btn--filter text-color-primary">{{ partialCached "svg-icons/filter.svg" . }} Filter by Category</button>
+    {{- if isset site.Taxonomies "categories" }}
+    {{- if not (eq (len site.Taxonomies.categories) 0) }}
+    <ul class="category-list bg-primary">
+      {{- range .Site.Taxonomies.categories }}
+      <li class="category-list__item">
+        <a href="{{ .Page.Permalink }}" class="category category-list__link transform-x-8 font-size-xs fw-700" aria-label="View all {{ .Page.Title }} posts">{{ .Page.Title }}<span> ({{ .Count }})</span></a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- end }}
+</div>

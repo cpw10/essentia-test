@@ -1,0 +1,22 @@
+table {
+  border-radius: 5px;
+  border: none;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    background-color: $light-gray;
+  }
+
+  td, th {
+    padding: $ic-100;
+  }
+
+  td {
+    border: 1px solid rgba($black, 0.4);
+  }
+
+  tr:nth-child(even) {
+    background-color: $light-gray;
+  }
+}

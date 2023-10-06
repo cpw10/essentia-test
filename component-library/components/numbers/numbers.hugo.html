@@ -1,0 +1,13 @@
+<section class="numbers block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+	<div class="wrapper-lg">
+		<h2 class="mb-6" id="{{ .heading | urlize }}">{{ .heading }}</h2>
+		<div class="columns gap-lg">
+			{{ range .numbers }}
+				<div class="number col flow">
+					<h3>{{ .heading }}</h3>
+					<p class="fw-500">{{ .body | markdownify }}</p>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</section>

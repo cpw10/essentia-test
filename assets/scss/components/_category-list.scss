@@ -1,0 +1,34 @@
+.category-wrapper {
+  position: relative;
+}
+
+.category-list {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  z-index: 3;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: $transition;
+  padding: $ic-300;
+  inline-size: max-content;
+
+  @include breakpoint(md) {
+    columns: 2;
+    inline-size: 500px;
+  }
+}
+
+.category-list__item {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-list__link {
+  color: $white;
+  padding: 0.5rem 1rem;
+}
+
+.category-list.list-open {
+  transform: scaleY(1);
+}

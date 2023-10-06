@@ -1,0 +1,12 @@
+<section class="block bg-{{ .background_color }}" aria-labelledby="{{ .heading | urlize }}">
+	<div class="wrapper-lg">
+		<h2 id="{{ .heading | urlize }}" class="mb-6">{{ .heading }}</h2>
+		<div class="columns gap-md">
+			{{ range .columns }}
+				<div class="col">
+					{{ partial "bookshop" . }}
+				</div>
+		  	{{ end }}
+		</div>
+	</div>
+</section>
